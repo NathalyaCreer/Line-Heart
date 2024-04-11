@@ -1,7 +1,7 @@
 # Heart String
 
 ## Repository
-<Link to your project's public GitHub respository>
+https://github.com/NathalyaCreer/Line-Heart/tree/main
 
 ## Description
 I plan to code an art piece of a heart made of flashing lines. Sort of like strobe lights. It can serve as a screen saver.
