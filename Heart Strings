@@ -1,9 +1,6 @@
 import math
-import string
-import secrets
 import turtle as t
 from turtle import *
-import random
 
 #heat shape
 def hearta(k) :
