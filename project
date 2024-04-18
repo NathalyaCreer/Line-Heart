@@ -5,37 +5,43 @@ import turtle as t
 from turtle import *
 import random
 
-def hearta(k) : #heart shape
+#heat shape
+def hearta(k) :
        return 15*math.sin(k)**3
 
-def heartb(k) : #strobe heart outlines
+#strobe heart lines
+def heartb(k) :
        return 15*math.cos(k)-5*\
             math.cos(2*k)-2*\
             math.cos(3*k)-\
             math.cos(4+k)
 
-def heartc(k) : #heart shape
+#second heart shape
+def heartc(k) :
        return 12*math.sin(k)**3
 
-def heartd(k) : #strobe heart outlines
+#inner heart pattern
+def heartd(k) :
        return 12*math.cos(k)-5*\
             math.cos(2*k)-2*\
             math.cos(3*k)-\
             math.cos(4+k)
 
+#drawing on screen
+def main():
+    col = ['violet', 'magenta','purple','pink']*900  # pen color list
+    speed(1000) # pen speed
+    bgcolor("black") #window and color
 
-col = ['violet', 'magenta','purple','pink']*900
-      
-speed(1000)
-bgcolor("black") #window and color
-t.hideturtle()
+    for i in range(6000):
+        goto(hearta(i)*20,heartb(i)*20)
+        goto(heartc(i)*20,heartd(i)*20)
+        for j in range(5):
+            t.pencolor(col[i]) # alternates pen color
+        goto(0,-50) # recenters heart
+    done()
 
-for i in range(6000):
-    goto(hearta(i)*20,heartb(i)*20)
-    goto(heartc(i)*20,heartd(i)*20)
-    for j in range(5):
-        t.pencolor(col[i])
-    goto(0,-50) #recenters heart
-done()
+if __name__ == "__main__":
+    main()
 
 
