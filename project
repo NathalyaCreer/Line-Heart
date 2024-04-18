@@ -24,17 +24,17 @@ def heartd(k) : #strobe heart outlines
             math.cos(4+k)
 
 
-col = ['violet', 'indigo', 'blue', 'green','magenta', 'yellow']
-          
+col = ['violet', 'magenta','purple','pink']*900
+      
 speed(1000)
 bgcolor("black") #window and color
 t.hideturtle()
 
 for i in range(6000):
     goto(hearta(i)*20,heartb(i)*20)
-    goto(heartc(i)*20,heartd(i)*20)
     for j in range(5):
-        t.pencolor(col)
+        t.pencolor(col[i])
     goto(0,-50) #recenters heart
 done()
+
 
